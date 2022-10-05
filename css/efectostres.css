@@ -1,0 +1,591 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+
+
+blockquote,
+q {
+	quotes: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+strong,
+b {
+	font-weight: 700;
+}
+em {
+	font-style: italic;
+}
+
+
+*,
+:before,
+:after {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: 0;
+}
+
+p + p {
+	margin-top: 25px;
+}
+.text--doodle {
+	font-family: Dudu Calligraphy;
+	font-size: 28px;
+	letter-spacing: 4px;
+	color: #404040;
+}
+.text--doodle span {
+	display: inline-block;
+	vertical-align: top;
+}
+.text--doodle span:nth-child(2n) {
+	-webkit-animation: fontsize-1 0.5s ease infinite,
+		smallrotate 0.6s ease infinite;
+	animation: fontsize-1 0.5s ease infinite, smallrotate 0.6s ease infinite;
+}
+.text--doodle span:nth-child(2n + 1) {
+	-webkit-animation: fontsize-2 0.5s ease infinite,
+		smallrotate reverse 0.6s ease infinite;
+	animation: fontsize-2 0.5s ease infinite,
+		smallrotate reverse 0.6s ease infinite;
+}
+.object__tooltip {
+	position: absolute;
+	opacity: 0;
+	width: 100%;
+	text-align: center;
+	-webkit-transition: top 0.6s ease-out, bottom 0.6s ease-out,
+		opacity 0.4s 0.2s ease;
+	transition: top 0.6s ease-out, bottom 0.6s ease-out, opacity 0.4s 0.2s ease;
+	left: 0px;
+}
+.object__tooltip--active,
+.tooltip--container:hover .tooltip--hoverable {
+	opacity: 1;
+}
+.object__tooltip--active.tooltip--top,
+.tooltip--container:hover .tooltip--hoverable.tooltip--top {
+	top: 110%;
+
+}
+.object__tooltip--active.tooltip--bottom,
+.tooltip--container:hover .tooltip--hoverable.tooltip--bottom {
+	top: 120%;
+	color: #000;
+}
+.tooltip--top {
+	top: 9%;
+
+}
+.tooltip--bottom {
+	top: 90%;
+}
+/*Efecto del portaretrato*/
+@-webkit-keyframes ringer-rotate {
+	0% {
+		-webkit-transform: rotateZ(0deg);
+		transform: rotateZ(0deg);
+	}
+	25% {
+		-webkit-transform: rotateZ(90deg);
+		transform: rotateZ(90deg);
+	}
+	40% {
+		-webkit-transform: rotateZ(0deg);
+		transform: rotateZ(0deg);
+	}
+	65% {
+		-webkit-transform: rotateZ(187deg);
+		transform: rotateZ(187deg);
+	}
+	100% {
+		-webkit-transform: rotateZ(0);
+		transform: rotateZ(0);
+	}
+}
+
+/*Efecto del Telefono*/
+@-webkit-keyframes handler-rotate {
+	0% {
+		-webkit-transform: rotateZ(0deg);
+		transform: rotateZ(0deg);
+	}
+	20% {
+		-webkit-transform: rotateZ(-5deg);
+		transform: rotateZ(-5deg);
+	}
+	40% {
+		-webkit-transform: rotateZ(5deg);
+		transform: rotateZ(5deg);
+	}
+	60% {
+		-webkit-transform: rotateZ(-5deg);
+		transform: rotateZ(-5deg);
+	}
+	80% {
+		-webkit-transform: rotateZ(5deg);
+		transform: rotateZ(5deg);
+	}
+	80% {
+		-webkit-transform: rotateZ(0deg);
+		transform: rotateZ(0deg);
+	}
+}
+
+body {
+	background-color: #ebebeb;
+	background-image: url(/imagenes/fondolila.jpg);
+	background-size: 220px;
+	-webkit-transition: -webkit-transform 0.3s ease-in-out;
+	transition: -ms-transform 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out;
+}
+.bookshelf {
+	position: relative;
+	width: 220px;
+}
+.bookshelf .shelf__base {
+	margin-top: -10px;
+}
+.bookshelf__container {
+	position: relative;
+	height: 135px;
+}
+.bookshelf__book {
+	height: 100px;
+	background-color: red;
+	position: absolute;
+	border-radius: 2px;
+	bottom: 10px;
+	width: 25px;
+	-webkit-transform-origin: 100% 50%;
+	-ms-transform-origin: 100% 50%;
+	transform-origin: 100% 50%;
+	-webkit-transition: -webkit-transform 0.3s ease-in-out;
+	transition: -ms-transform 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out;
+	z-index: 804;
+	cursor: pointer;
+}
+.bookshelf__book::before,
+.bookshelf__book::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	left: 0;
+}
+.bookshelf__book::before {
+	height: 3px;
+	top: 10px;
+}
+.bookshelf__book::after {
+	height: 30px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.bookshelf__book:hover {
+	-webkit-transform: scale(1.08);
+	-ms-transform: scale(1.08);
+	transform: scale(1.08);
+}
+.book--1 {
+	height: 120px;
+	background-color: #7bc8a4;
+	left: 25px;
+}
+.book--1::before {
+	background-color: #43a074;
+	box-shadow: #43a074 0 5px 0, #43a074 0 25px 0, #43a074 0 75px 0,
+		#43a074 0 95px 0, #43a074 0 100px 0;
+}
+.book--1::after {
+	background-color: #43a074;
+}
+.book--2 {
+	background-color: #4cc3d9;
+	width: 30px;
+	left: 52px;
+}
+.book--2::before {
+	background-color: #2494a9;
+	box-shadow: #2494a9 0 5px 0, #2494a9 0 10px 0, #2494a9 0 70px, #2494a9 0 75px,
+		#2494a9 0 80px 0;
+}
+.book--2::after {
+	height: 40px;
+	background-color: #2494a9;
+}
+.book--3 {
+	height: 110px;
+	background-color: #f16745;
+	left: 102px;
+	-webkit-transform: rotateZ(-25deg);
+	-ms-transform: rotateZ(-25deg);
+	transform: rotateZ(-25deg);
+	bottom: 15px;
+}
+.book--3::before {
+	background-color: #ca340f;
+	height: 6px;
+	box-shadow: #ca340f 0 10px 0, #ca340f 0 80px 0, #ca340f 0 90px 0;
+}
+.book--3::after {
+	background-color: #ca340f;
+}
+.book--3:hover {
+	-webkit-transform: rotateZ(-25deg) scale(1.08);
+	-ms-transform: rotateZ(-25deg) scale(1.08);
+	transform: rotateZ(-25deg) scale(1.08);
+}
+.book--4 {
+	height: 90px;
+	background-color: #93648d;
+	left: 150px;
+}
+.book--4::before {
+	height: 6px;
+	background-color: #674663;
+	box-shadow: #674663 0 66px 0;
+}
+.book--4::after {
+	height: 25px;
+	background-color: #674663;
+}
+.book--5 {
+	width: 30px;
+	background-color: #ffc65d;
+	left: 178px;
+}
+.book--5::before {
+	background-color: #f49e00;
+	box-shadow: #f49e00 0 80px 0;
+}
+.book--5::after {
+	height: 50px;
+	background-color: #f49e00;
+}
+.shelf__base {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 15px;
+	background-color: #664f36;
+	border-radius: 3px;
+}
+.shelf__base::before,
+.shelf__base::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 100%;
+	width: 15px;
+	border-top: 25px solid #353b42;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	color: #353b42;
+}
+.shelf__base::before {
+	left: 15%;
+}
+.shelf__base::after {
+	right: 15%;
+}
+
+.portrait {
+	position: relative;
+	width: 160px;
+
+}
+.portrait:hover .portrait__container {
+	-webkit-transform: rotateZ(-60deg);
+	-ms-transform: rotateZ(-60deg);
+	transform: rotateZ(-60deg);
+}
+.portrait__container,
+.portrait__safe {
+	position: relative;
+	width: 100%;
+	height: 160px;
+	cursor: pointer;
+}
+.portrait__container {
+	z-index: 801;
+	background-color: #94734f;
+	box-shadow: #523f2b -2px 0, #523f2b 2px 0, #523f2b 0 -2px, #523f2b 0 2px;
+	-webkit-transform-origin: 50% -20%;
+	-ms-transform-origin: 50% -20%;
+	transform-origin: 50% -20%;
+	-webkit-transition: -webkit-transform 0.3s
+		cubic-bezier(0.63, -0.24, 0.13, 1.23);
+	transition: -ms-transform 0.3s cubic-bezier(0.63, -0.24, 0.13, 1.23);
+	transition: transform 0.3s cubic-bezier(0.63, -0.24, 0.13, 1.23);
+}
+.portrait__nail {
+	position: absolute;
+	width: 4px;
+	height: 4px;
+	background-color: #404040;
+	top: -20%;
+	border-radius: 50%;
+	left: 50%;
+	trasnform: translateX(-50%);
+}
+.portrait__nail::before,
+.portrait__nail::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 42px;
+	height: 1px;
+	background-color: #404040;
+	-webkit-transform-origin: 0;
+	-ms-transform-origin: 0;
+	transform-origin: 0;
+	left: 2px;
+}
+.portrait__nail::before {
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.portrait__nail::after {
+	-webkit-transform: rotate(135deg);
+	-ms-transform: rotate(135deg);
+	transform: rotate(135deg);
+}
+.portrait__inside {
+	padding: 10px;
+}
+.portrait__photo {
+	border: 2px solid #523f2b;
+	background-image: url(/assets/img/avatar-kaisermann.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: contain;
+	background-color: #f5f5f5;
+	width: 140px;
+	height: 140px;
+}
+.portrait__safe {
+	z-index: 800;
+	position: absolute;
+	background-color: #353b42;
+	border-radius: 10px;
+	border: 6px solid #58626d;
+	top: 0;
+}
+.portrait__safe:hover .safe__lock {
+	-webkit-animation: rotate-safe-lock 1s ease-in-out;
+	animation: rotate-safe-lock 1s ease-in-out;
+}
+.portrait__safe:hover .safe__handle {
+	-webkit-transform: rotateZ(270deg);
+	-ms-transform: rotateZ(270deg);
+	transform: rotateZ(270deg);
+}
+
+.telephone {
+	width: 210px;
+	position: relative;
+}
+.telephone__container {
+	cursor: pointer;
+	height: 146px;
+	-webkit-transform-origin: 50% 100%;
+	-ms-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+	-webkit-transform: scale3d(0.8, 0.8, 1);
+	-ms-transform: scale3d(0.8, 0.8, 1);
+	transform: scale3d(0.8, 0.8, 1);
+}
+.telephone__base {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+.telephone__base-container {
+	height: 130px;
+	width: 200px;
+}
+.telephone__base-container::after {
+	border-bottom: 130px solid #29aac1;
+	height: 0;
+	width: 180px;
+}
+.telephone__base-container::before {
+	border-bottom: 130px solid #4cc3d9;
+	width: 200px;
+}
+.telephone__base-container:hover .telephone__ringer {
+	-webkit-animation: ringer-rotate 2.5s ease;
+	animation: ringer-rotate 2.5s ease;
+}
+.telephone__base-container::after,
+.telephone__base-container::before {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	height: 0;
+	z-index: 800;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+.telephone__ringer {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background-color: #f5f5f5;
+	width: 85px;
+	height: 85px;
+	border-radius: 50%;
+	z-index: 801;
+}
+.telephone__ringer::after,
+.telephone__ringer::before {
+	content: "";
+	display: block;
+	position: absolute;
+	border-radius: 50%;
+}
+.telephone__ringer::after {
+	width: 35px;
+	height: 35px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background-color: #29aac1;
+}
+.telephone__ringer::before {
+	background-color: #404040;
+	width: 12px;
+	height: 12px;
+	top: 25px;
+	left: 66px;
+	box-shadow: #404040 -10px -14px, #404040 -26px -21px, #404040 -43px -18px,
+		#404040 -56px -6px, #404040 -61px 11px, #404040 -57px 27px,
+		#404040 -45px 39px, #404040 -28px 43px, #404040 -12px 38px;
+}
+.ringer__blocker {
+	position: absolute;
+	width: 22px;
+	height: 18px;
+	border-bottom: 5px solid #29aac1;
+	border-radius: 50%;
+	background-color: transparent;
+	top: 63px;
+	left: 128px;
+	z-index: 803;
+}
+.telephone__hook {
+	position: absolute;
+	bottom: 130px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #4cc3d9;
+	width: 80px;
+	height: 15px;
+}
+.telephone__hook::before {
+	content: "";
+	display: block;
+	position: absolute;
+	background-color: #29aac1;
+	width: 5px;
+	height: 10px;
+	top: -10px;
+	left: 15px;
+	box-shadow: #29aac1 40px 0;
+}
+.telephone__handle {
+	position: absolute;
+	width: 210px;
+	height: 25px;
+	background-color: #4cc3d9;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	bottom: 150px;
+	z-index: 804;
+}
+.telephone__handle::before,
+.telephone__handle::after {
+	position: absolute;
+	content: "";
+	display: block;
+	width: 175px;
+	height: 20px;
+	border-radius: 50%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+.telephone__handle::before {
+	top: -7px;
+	background-color: #4cc3d9;
+}
+.telephone__handle::after {
+	bottom: -15px;
+	background-color: transparent;
+	border-top: 6px solid #29aac1;
+}
+.telephone__handle:hover {
+	-webkit-animation: handler-rotate 0.7s ease;
+	animation: handler-rotate 0.7s ease;
+	-webkit-animation-iteration-count: 2;
+	animation-iteration-count: 2;
+}
+.telephone__cap {
+	position: absolute;
+	z-index: 803;
+	border-bottom: 40px solid #29aac1;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	height: 0;
+	width: 70px;
+	border-radius: 30px;
+}
+.telephone__cap::before {
+	content: "";
+	display: block;
+	position: absolute;
+	background-color: #29aac1;
+	border-bottom: 3px solid #404040;
+	top: 35px;
+	left: 0;
+	height: 10px;
+	width: 30px;
+	border-radius: 50%;
+}
+.cap--left {
+	bottom: -40px;
+	left: -20px;
+}
+.cap--right {
+	bottom: -40px;
+	right: -20px;
+}
