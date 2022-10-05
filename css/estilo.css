@@ -3,7 +3,8 @@
 #cuerpo
 {
 	width: 90%;
-	background: #FA3074;
+	background-image: url(/imagenes/fondolila.png);
+	/*background: #FA3074;*/
 	padding-bottom: 50px;
 }
 #titulo
