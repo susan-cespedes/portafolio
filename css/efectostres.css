@@ -139,13 +139,8 @@ p + p {
 }
 
 body {
-	/*background-color: #ebebeb;*/
-	background-image: url(/imagenes/fondolila.png);
-	background-repeat: repeat;
-	/*background-size: 220px;
-	-webkit-transition: -webkit-transform 0.3s ease-in-out;
-	transition: -ms-transform 0.3s ease-in-out;
-	transition: transform 0.3s ease-in-out;*/
+	background: rgb(10,98,71);
+	background: linear-gradient(90deg, rgba(10,98,71,1) 11%, rgba(2,80,75,1) 50%, rgba(0,255,183,0.9167017148656338) 77%);
 }
 .bookshelf {
 	position: relative;
