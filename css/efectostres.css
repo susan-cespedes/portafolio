@@ -141,6 +141,7 @@ p + p {
 body {
 	background-color: #ebebeb;
 	background-image: url(/imagenes/fondorosa.jpg);
+	background-repeat: repeat;
 	background-size: 220px;
 	-webkit-transition: -webkit-transform 0.3s ease-in-out;
 	transition: -ms-transform 0.3s ease-in-out;
