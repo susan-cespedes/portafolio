@@ -139,8 +139,8 @@ p + p {
 }
 
 body {
-	background-color: #ebebeb;
-	background-image: url(https://github.com/susan-cespedes/portafolio/blob/main/imagenes/fondolila.jpg);
+	/*background-color: #ebebeb;*/
+	background-image: url(/imagenes/fondolila.jpg);
 	background-repeat: repeat;
 	background-size: 220px;
 	-webkit-transition: -webkit-transform 0.3s ease-in-out;
