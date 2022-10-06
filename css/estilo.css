@@ -3,8 +3,9 @@
 #cuerpo
 {
 	width: 90%;
-	background-image: url(/imagenes/fondolila.png);
-	background: #f587a1;
+	background-image: url(/imagenes/fondoconmovimiento.gif);
+	/*background-image: url(/imagenes/fondolila.png);*/
+	/*background: #f587a1;*/
 	padding-bottom: 50px;
 }
 #titulo
