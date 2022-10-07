@@ -3,7 +3,10 @@
 	margin:0;
 }
 
-
+body {
+	background-image: url(../imagenes/fondoconmovimiento.gif);
+	background-repeat: repeat;
+}
 
 blockquote,
 q {
@@ -138,10 +141,6 @@ p + p {
 	}
 }
 
-body {
-	/*background: rgb(10,98,71);
-	background: linear-gradient(90deg, rgba(10,98,71,1) 11%, rgba(2,80,75,1) 50%, rgba(0,255,183,0.9167017148656338) 77%);*/
-}
 .bookshelf {
 	position: relative;
 	width: 220px;

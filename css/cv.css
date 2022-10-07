@@ -313,12 +313,6 @@ p{
     flex: 100%;
   }
 }
-#cuerpo
-{
-	width: 80%;
-	margin: auto;
-	text-align: center;
-}
 #titulosimagenes
 {
 	text-transform: inherit;
