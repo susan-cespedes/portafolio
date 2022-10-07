@@ -115,9 +115,9 @@ p{
 
 }
 #galeriaimagen{
-	float: left;
 	padding: 10px;
-   
+	margin: 0 auto;
+	
    }
 #saltodediv{
    
@@ -279,32 +279,45 @@ p{
 }
 
 .flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 30px;
-  text-align: center;
-}
+  
+	flex-wrap: wrap;
+	font-size: 30px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+  
+  }
+  .flex-container > * {
+	margin: auto;
+  }
 
 .flex-item-left {
   
   padding-top:100px;
   flex: 33%;
+  
+  
 }
 .flex-item-center {
 	padding-top: 100px;
 	flex: 33%;
+	align-items: center;
+	
 }
 .flex-item-right {
 	padding-top: 100px;
 	flex: 33%;
+	
 }
 .flex-item-bottom-left {
 	padding-top: 100px;
 	flex: 50%;
+	text-align: center;
 }
 .flex-item-bottom-right {
 	padding-top: 100px;
 	flex: 50%;
+	align-items: center;
 }
 
 /* Responsive layout - makes a one column-layout instead of a two-column layout */
@@ -317,6 +330,7 @@ p{
 {
 	text-transform: inherit;
 	animation: fontsize-2 0.5s ease infinite, smallrotate reverse 0.6s ease infinite;
+	color: #FFFFFF;
 	
 }
 #efectoimagen img:hover
@@ -329,8 +343,8 @@ p{
 }
 .flex-redessociales {
 	display: flex;
-	width: 50%;
-	margin: auto;
+	width: 100%;
+	justify-content: center;
 }
 
 .flex-redessociales > div {
@@ -346,3 +360,27 @@ p{
 {
 	width:80%;
 	margin:auto;}
+
+#imagencentro{
+	text-align: center;
+
+}
+#imagencentro img:hover{
+	width: 230px;
+	transform: rotate(-10deg);
+}
+
+#mipresentacion >div{
+	background-image: url(../imagenes/fondoconmovimiento.gif);
+	background-size: cover;
+}
+
+#mistrabajos >div{
+	background-image: url(../imagenes/fondoconmovimiento.gif);
+	background-size: cover;
+}
+
+#redessociales >div{
+	background-image: url(../imagenes/fondoconmovimiento.gif);
+	background-size: cover;
+}

@@ -2,19 +2,16 @@
 /* CSS Document */
 #cuerpo
 {
-	width: 90%;
-	/*background-image: url(/imagenes/fondolila.png);*/
-	/*background: #f587a1;*/
-	padding-bottom: 50px;
-	margin: auto;
+	display: flex;
+	justify-content: center;
 }
-#titulo
+h1
 {
 	font-family: "Mutter Krause Halbfett Bold";
 	font-weight: bold;
 	text-align: center;
-	color:#0e0d0e;
-	text-shadow:4px 2px #7F45FF;
+	color:#1fc724;
+	text-shadow:4px 2px #f1f0f3;
 	transition: all 0.5s ease;
 
 	
